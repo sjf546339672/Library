@@ -76,9 +76,7 @@
 # print(list2)
 # print(b)
 # print(c)
-import random
-
-
+# import random
 # t = ""
 # for i in range(16):
 #     t += str(random.randrange(0, 9))
@@ -103,4 +101,14 @@ import random
 # p1 = "123<.qewqe>dad<dsadasd>aadas><>>>>1231><11"
 # print(re.findall("<.*>", p1))
 # print(re.findall("<.*?>", p1))
+
+from django.core.paginator import Paginator
+
+list2 = ['john', 'paul', 'george', 'ringo', "aaa"]
+pg = Paginator(list2, 2)
+print(pg.count)
+print(pg.num_pages)
+page = pg.page(1)
+print(page.has_previous())
+print(page.has_next())
 
